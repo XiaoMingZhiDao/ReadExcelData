@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48FE1B961D960F7300DDF475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1B951D960F7300DDF475 /* main.m */; };
+		48FE1B991D960F7300DDF475 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1B981D960F7300DDF475 /* AppDelegate.m */; };
+		48FE1B9F1D960F7300DDF475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1B9D1D960F7300DDF475 /* Main.storyboard */; };
+		48FE1BA11D960F7300DDF475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1BA01D960F7300DDF475 /* Assets.xcassets */; };
+		48FE1BA41D960F7300DDF475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1BA21D960F7300DDF475 /* LaunchScreen.storyboard */; };
+		48FE1BBF1D96109600DDF475 /* FMDBManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1BB11D96109600DDF475 /* FMDBManger.m */; };
+		48FE1BC01D96109600DDF475 /* MDJStatusBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1BB41D96109600DDF475 /* MDJStatusBarHUD.bundle */; };
+		48FE1BC11D96109600DDF475 /* MDJStatusBarHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1BB61D96109600DDF475 /* MDJStatusBarHUD.m */; };
+		48FE1BC21D96109600DDF475 /* abc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1BB81D96109600DDF475 /* abc.txt */; };
+		48FE1BC31D96109600DDF475 /* abc.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 48FE1BB91D96109600DDF475 /* abc.xlsx */; };
+		48FE1BCF1D96136B00DDF475 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1BC81D96136B00DDF475 /* ViewController.m */; };
+		48FE1BD01D96136B00DDF475 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1BCB1D96136B00DDF475 /* UserInfo.m */; };
+		48FE1BD11D96136B00DDF475 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FE1BCE1D96136B00DDF475 /* MyTableViewCell.m */; };
+		50F47DB0C386017EC34313D6 /* libPods-ReadExcelDataDemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD7C3A6F6142C0B0C2B10FE /* libPods-ReadExcelDataDemon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48FE1B911D960F7300DDF475 /* ReadExcelDataDemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadExcelDataDemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FE1B951D960F7300DDF475 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48FE1B971D960F7300DDF475 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48FE1B981D960F7300DDF475 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48FE1B9E1D960F7300DDF475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48FE1BA01D960F7300DDF475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48FE1BA31D960F7300DDF475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48FE1BA51D960F7300DDF475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48FE1BB01D96109600DDF475 /* FMDBManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManger.h; sourceTree = "<group>"; };
+		48FE1BB11D96109600DDF475 /* FMDBManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManger.m; sourceTree = "<group>"; };
+		48FE1BB21D96109600DDF475 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		48FE1BB41D96109600DDF475 /* MDJStatusBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MDJStatusBarHUD.bundle; sourceTree = "<group>"; };
+		48FE1BB51D96109600DDF475 /* MDJStatusBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDJStatusBarHUD.h; sourceTree = "<group>"; };
+		48FE1BB61D96109600DDF475 /* MDJStatusBarHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDJStatusBarHUD.m; sourceTree = "<group>"; };
+		48FE1BB81D96109600DDF475 /* abc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abc.txt; sourceTree = "<group>"; };
+		48FE1BB91D96109600DDF475 /* abc.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.xlsx; sourceTree = "<group>"; };
+		48FE1BC71D96136B00DDF475 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48FE1BC81D96136B00DDF475 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48FE1BCA1D96136B00DDF475 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		48FE1BCB1D96136B00DDF475 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		48FE1BCD1D96136B00DDF475 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		48FE1BCE1D96136B00DDF475 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		9FD7C3A6F6142C0B0C2B10FE /* libPods-ReadExcelDataDemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadExcelDataDemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C32CE90D84BC196C25A803 /* Pods-ReadExcelDataDemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadExcelDataDemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadExcelDataDemon/Pods-ReadExcelDataDemon.release.xcconfig"; sourceTree = "<group>"; };
+		CB382177F85AF76240E5419E /* Pods-ReadExcelDataDemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadExcelDataDemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadExcelDataDemon/Pods-ReadExcelDataDemon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48FE1B8E1D960F7300DDF475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F47DB0C386017EC34313D6 /* libPods-ReadExcelDataDemon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2102C541AD8BBFA15400A213 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7C3A6F6142C0B0C2B10FE /* libPods-ReadExcelDataDemon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48FE1B881D960F7300DDF475 = {
+			isa = PBXGroup;
+			children = (
+				48FE1B931D960F7300DDF475 /* ReadExcelDataDemon */,
+				48FE1B921D960F7300DDF475 /* Products */,
+				C5233D8CEDC4949D2F3CFA99 /* Pods */,
+				2102C541AD8BBFA15400A213 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48FE1B921D960F7300DDF475 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1B911D960F7300DDF475 /* ReadExcelDataDemon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48FE1B931D960F7300DDF475 /* ReadExcelDataDemon */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BAB1D96109600DDF475 /* Classes */,
+				48FE1B971D960F7300DDF475 /* AppDelegate.h */,
+				48FE1B981D960F7300DDF475 /* AppDelegate.m */,
+				48FE1B941D960F7300DDF475 /* Supporting Files */,
+			);
+			path = ReadExcelDataDemon;
+			sourceTree = "<group>";
+		};
+		48FE1B941D960F7300DDF475 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1B9D1D960F7300DDF475 /* Main.storyboard */,
+				48FE1BA01D960F7300DDF475 /* Assets.xcassets */,
+				48FE1BA21D960F7300DDF475 /* LaunchScreen.storyboard */,
+				48FE1BA51D960F7300DDF475 /* Info.plist */,
+				48FE1B951D960F7300DDF475 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48FE1BAB1D96109600DDF475 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BC61D96136B00DDF475 /* Controller */,
+				48FE1BC91D96136B00DDF475 /* Model */,
+				48FE1BCC1D96136B00DDF475 /* View */,
+				48FE1BAE1D96109600DDF475 /* ReadExcelClass */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		48FE1BAE1D96109600DDF475 /* ReadExcelClass */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BAF1D96109600DDF475 /* FMDBManger */,
+				48FE1BB31D96109600DDF475 /* MDJStatusBarHUD */,
+				48FE1BB71D96109600DDF475 /* source */,
+			);
+			path = ReadExcelClass;
+			sourceTree = "<group>";
+		};
+		48FE1BAF1D96109600DDF475 /* FMDBManger */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BB01D96109600DDF475 /* FMDBManger.h */,
+				48FE1BB11D96109600DDF475 /* FMDBManger.m */,
+				48FE1BB21D96109600DDF475 /* Singleton.h */,
+			);
+			path = FMDBManger;
+			sourceTree = "<group>";
+		};
+		48FE1BB31D96109600DDF475 /* MDJStatusBarHUD */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BB41D96109600DDF475 /* MDJStatusBarHUD.bundle */,
+				48FE1BB51D96109600DDF475 /* MDJStatusBarHUD.h */,
+				48FE1BB61D96109600DDF475 /* MDJStatusBarHUD.m */,
+			);
+			path = MDJStatusBarHUD;
+			sourceTree = "<group>";
+		};
+		48FE1BB71D96109600DDF475 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BB81D96109600DDF475 /* abc.txt */,
+				48FE1BB91D96109600DDF475 /* abc.xlsx */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		48FE1BC61D96136B00DDF475 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BC71D96136B00DDF475 /* ViewController.h */,
+				48FE1BC81D96136B00DDF475 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48FE1BC91D96136B00DDF475 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BCA1D96136B00DDF475 /* UserInfo.h */,
+				48FE1BCB1D96136B00DDF475 /* UserInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48FE1BCC1D96136B00DDF475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48FE1BCD1D96136B00DDF475 /* MyTableViewCell.h */,
+				48FE1BCE1D96136B00DDF475 /* MyTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5233D8CEDC4949D2F3CFA99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB382177F85AF76240E5419E /* Pods-ReadExcelDataDemon.debug.xcconfig */,
+				A2C32CE90D84BC196C25A803 /* Pods-ReadExcelDataDemon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48FE1B901D960F7300DDF475 /* ReadExcelDataDemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FE1BA81D960F7300DDF475 /* Build configuration list for PBXNativeTarget "ReadExcelDataDemon" */;
+			buildPhases = (
+				0329954B364F6F017F328C71 /* [CP] Check Pods Manifest.lock */,
+				48FE1B8D1D960F7300DDF475 /* Sources */,
+				48FE1B8E1D960F7300DDF475 /* Frameworks */,
+				48FE1B8F1D960F7300DDF475 /* Resources */,
+				F3EC8CA35562B1A18823CB81 /* [CP] Embed Pods Frameworks */,
+				EFCA023341E6152478654BA8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReadExcelDataDemon;
+			productName = ReadExcelDataDemon;
+			productReference = 48FE1B911D960F7300DDF475 /* ReadExcelDataDemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48FE1B891D960F7300DDF475 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = MDJ;
+				TargetAttributes = {
+					48FE1B901D960F7300DDF475 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 48FE1B8C1D960F7300DDF475 /* Build configuration list for PBXProject "ReadExcelDataDemon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48FE1B881D960F7300DDF475;
+			productRefGroup = 48FE1B921D960F7300DDF475 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48FE1B901D960F7300DDF475 /* ReadExcelDataDemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48FE1B8F1D960F7300DDF475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FE1BA41D960F7300DDF475 /* LaunchScreen.storyboard in Resources */,
+				48FE1BA11D960F7300DDF475 /* Assets.xcassets in Resources */,
+				48FE1B9F1D960F7300DDF475 /* Main.storyboard in Resources */,
+				48FE1BC01D96109600DDF475 /* MDJStatusBarHUD.bundle in Resources */,
+				48FE1BC21D96109600DDF475 /* abc.txt in Resources */,
+				48FE1BC31D96109600DDF475 /* abc.xlsx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0329954B364F6F017F328C71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFCA023341E6152478654BA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadExcelDataDemon/Pods-ReadExcelDataDemon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3EC8CA35562B1A18823CB81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadExcelDataDemon/Pods-ReadExcelDataDemon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48FE1B8D1D960F7300DDF475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FE1B991D960F7300DDF475 /* AppDelegate.m in Sources */,
+				48FE1BD11D96136B00DDF475 /* MyTableViewCell.m in Sources */,
+				48FE1B961D960F7300DDF475 /* main.m in Sources */,
+				48FE1BBF1D96109600DDF475 /* FMDBManger.m in Sources */,
+				48FE1BC11D96109600DDF475 /* MDJStatusBarHUD.m in Sources */,
+				48FE1BD01D96136B00DDF475 /* UserInfo.m in Sources */,
+				48FE1BCF1D96136B00DDF475 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48FE1B9D1D960F7300DDF475 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FE1B9E1D960F7300DDF475 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48FE1BA21D960F7300DDF475 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FE1BA31D960F7300DDF475 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48FE1BA61D960F7300DDF475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48FE1BA71D960F7300DDF475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48FE1BA91D960F7300DDF475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB382177F85AF76240E5419E /* Pods-ReadExcelDataDemon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReadExcelDataDemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = UUXue.ReadExcelDataDemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		48FE1BAA1D960F7300DDF475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C32CE90D84BC196C25A803 /* Pods-ReadExcelDataDemon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReadExcelDataDemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = UUXue.ReadExcelDataDemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48FE1B8C1D960F7300DDF475 /* Build configuration list for PBXProject "ReadExcelDataDemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FE1BA61D960F7300DDF475 /* Debug */,
+				48FE1BA71D960F7300DDF475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FE1BA81D960F7300DDF475 /* Build configuration list for PBXNativeTarget "ReadExcelDataDemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FE1BA91D960F7300DDF475 /* Debug */,
+				48FE1BAA1D960F7300DDF475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48FE1B891D960F7300DDF475 /* Project object */;
+}

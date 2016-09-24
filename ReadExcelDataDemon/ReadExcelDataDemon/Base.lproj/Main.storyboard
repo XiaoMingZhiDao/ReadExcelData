@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcf-pU-tba">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="从abc.txt写入数据">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeDataClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j77-rJ-yPs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVc-HX-fa8">
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.62352941179999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="读取数据">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="readDataClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6a-J4-dm8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfI-oy-sy0">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="清除数据">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearDataClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uX-bw-vLJ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIO-aM-1A7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="30" id="wwU-jC-qNQ" customClass="MyTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwU-jC-qNQ" id="GqM-bV-Kho">
+                                            <frame key="frameInset" width="375" height="29"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小王" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-RT-XuR" userLabel="姓名">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-5e-53Q" userLabel="性别">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwX-0b-N9s" userLabel="年龄">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RwX-0b-N9s" firstAttribute="leading" secondItem="7Gm-5e-53Q" secondAttribute="trailing" constant="60" id="B9A-6G-U5L"/>
+                                                <constraint firstItem="7Gm-5e-53Q" firstAttribute="leading" secondItem="xR0-RT-XuR" secondAttribute="trailing" constant="20" id="Plm-Ym-A97"/>
+                                                <constraint firstItem="xR0-RT-XuR" firstAttribute="centerY" secondItem="GqM-bV-Kho" secondAttribute="centerY" id="UZK-Sg-CMe"/>
+                                                <constraint firstItem="RwX-0b-N9s" firstAttribute="width" secondItem="xR0-RT-XuR" secondAttribute="width" id="Ubc-ur-dJO"/>
+                                                <constraint firstItem="7Gm-5e-53Q" firstAttribute="centerY" secondItem="GqM-bV-Kho" secondAttribute="centerY" id="Y4E-8A-Rbk"/>
+                                                <constraint firstItem="RwX-0b-N9s" firstAttribute="height" secondItem="xR0-RT-XuR" secondAttribute="height" id="c1Z-xL-NqW"/>
+                                                <constraint firstItem="xR0-RT-XuR" firstAttribute="leading" secondItem="GqM-bV-Kho" secondAttribute="leading" constant="15" id="j1u-eZ-qD9"/>
+                                                <constraint firstItem="RwX-0b-N9s" firstAttribute="centerY" secondItem="GqM-bV-Kho" secondAttribute="centerY" id="mTc-Rs-Ess"/>
+                                                <constraint firstItem="7Gm-5e-53Q" firstAttribute="width" secondItem="xR0-RT-XuR" secondAttribute="width" id="taN-Qw-wsG"/>
+                                                <constraint firstItem="7Gm-5e-53Q" firstAttribute="height" secondItem="xR0-RT-XuR" secondAttribute="height" id="ul6-Mq-1Yh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="RwX-0b-N9s" id="ilc-9g-jI0"/>
+                                            <outlet property="nameLabel" destination="xR0-RT-XuR" id="tTu-hj-zlR"/>
+                                            <outlet property="sexLabel" destination="7Gm-5e-53Q" id="5N8-oa-zjy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FeC-v7-Va3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tTe-sc-4Pw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GfI-oy-sy0" secondAttribute="trailing" id="0Xz-Si-gVa"/>
+                            <constraint firstItem="Pcf-pU-tba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6h7-wq-M2D"/>
+                            <constraint firstItem="UIO-aM-1A7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C9T-38-DmL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UIO-aM-1A7" secondAttribute="bottom" id="Nne-eE-Zlo"/>
+                            <constraint firstItem="UVc-HX-fa8" firstAttribute="leading" secondItem="Pcf-pU-tba" secondAttribute="trailing" id="Oyl-tT-FrN"/>
+                            <constraint firstItem="UIO-aM-1A7" firstAttribute="top" secondItem="GfI-oy-sy0" secondAttribute="bottom" constant="10" id="YPO-mY-tCm"/>
+                            <constraint firstAttribute="trailing" secondItem="UIO-aM-1A7" secondAttribute="trailing" id="b9q-o5-SpG"/>
+                            <constraint firstItem="UVc-HX-fa8" firstAttribute="height" secondItem="Pcf-pU-tba" secondAttribute="height" id="eAv-NG-ms7"/>
+                            <constraint firstItem="GfI-oy-sy0" firstAttribute="leading" secondItem="UVc-HX-fa8" secondAttribute="trailing" id="fO2-qh-xqs"/>
+                            <constraint firstItem="Pcf-pU-tba" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="fsc-bR-8Mw"/>
+                            <constraint firstItem="GfI-oy-sy0" firstAttribute="width" secondItem="Pcf-pU-tba" secondAttribute="width" id="h9K-Os-Y1R"/>
+                            <constraint firstItem="GfI-oy-sy0" firstAttribute="centerY" secondItem="Pcf-pU-tba" secondAttribute="centerY" id="ja5-as-MOX"/>
+                            <constraint firstItem="UVc-HX-fa8" firstAttribute="centerY" secondItem="Pcf-pU-tba" secondAttribute="centerY" id="lTm-68-7iD"/>
+                            <constraint firstItem="UVc-HX-fa8" firstAttribute="width" secondItem="Pcf-pU-tba" secondAttribute="width" id="oSj-ca-f9g"/>
+                            <constraint firstItem="GfI-oy-sy0" firstAttribute="height" secondItem="Pcf-pU-tba" secondAttribute="height" id="xZE-lL-veH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UIO-aM-1A7" id="HXX-fg-WYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="54"/>
+        </scene>
+    </scenes>
+</document>
