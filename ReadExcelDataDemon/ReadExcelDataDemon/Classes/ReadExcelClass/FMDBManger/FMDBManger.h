@@ -21,15 +21,8 @@
 /** 单例，返回 FMDBManger */
 MDJSingletonH(FMDBManger);
 
-/**
- *  插入用户信息
- *  @pram   name 姓名
- *  @pram   sex  性别 1：男；0：女
- *  @pram   age  年龄
- *
- */
-- (BOOL)insertUserInformationWithName:(NSString *)name sex:(NSNumber *)sex age:(NSNumber *)age;
 
+- (BOOL)insertUserInformationWithForeignLanguage:(NSString *)ForeignLanguage chineseLanguage:(NSNumber *)ChineseLanguage;
 /**
  *  插入用户信息
  *  @pram   sql 数据库语句
@@ -45,4 +38,9 @@ MDJSingletonH(FMDBManger);
  *  清除数据库
  */
 - (void)clearAllDataBase;
+   
+/**
+ *  查找某个单词
+ */
+- (NSArray *)findDicWithKey:(NSString *)key;
 @end

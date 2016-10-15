@@ -1,3 +1,0 @@
-insert into ExcelTable (UserName,UserSex,UserAge) values ('小李','1','32');
-insert into ExcelTable (UserName,UserSex,UserAge) values ('小王','1','26');
-insert into ExcelTable (UserName,UserSex,UserAge) values ('小强','0','28');

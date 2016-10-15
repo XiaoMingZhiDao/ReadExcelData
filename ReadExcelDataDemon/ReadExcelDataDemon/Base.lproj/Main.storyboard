@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -98,16 +98,48 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tTe-sc-4Pw"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-l8-3L5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AgY-zU-ysU"/>
+                                    <constraint firstAttribute="width" constant="97" id="YFL-L7-eby"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-EE-PPQ">
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.62352941179999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="piP-Nx-Zze"/>
+                                </constraints>
+                                <state key="normal" title="查找"/>
+                                <connections>
+                                    <action selector="findSmoeKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksE-6X-qWf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入俄文,默认чудовище" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMn-QW-xDe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Ltt-wE-f4n"/>
+                                    <constraint firstAttribute="height" constant="17" id="hu6-ws-Aby"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GfI-oy-sy0" secondAttribute="trailing" id="0Xz-Si-gVa"/>
+                            <constraint firstItem="lMn-QW-xDe" firstAttribute="centerY" secondItem="ZOv-l8-3L5" secondAttribute="centerY" id="6IU-ut-M8l"/>
                             <constraint firstItem="Pcf-pU-tba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6h7-wq-M2D"/>
+                            <constraint firstItem="7HP-EE-PPQ" firstAttribute="centerY" secondItem="ZOv-l8-3L5" secondAttribute="centerY" id="7k1-Ms-UKs"/>
                             <constraint firstItem="UIO-aM-1A7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C9T-38-DmL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UIO-aM-1A7" secondAttribute="bottom" id="Nne-eE-Zlo"/>
                             <constraint firstItem="UVc-HX-fa8" firstAttribute="leading" secondItem="Pcf-pU-tba" secondAttribute="trailing" id="Oyl-tT-FrN"/>
+                            <constraint firstItem="7HP-EE-PPQ" firstAttribute="leading" secondItem="ZOv-l8-3L5" secondAttribute="trailing" constant="5" id="S5b-DR-Cey"/>
                             <constraint firstItem="UIO-aM-1A7" firstAttribute="top" secondItem="GfI-oy-sy0" secondAttribute="bottom" constant="10" id="YPO-mY-tCm"/>
                             <constraint firstAttribute="trailing" secondItem="UIO-aM-1A7" secondAttribute="trailing" id="b9q-o5-SpG"/>
+                            <constraint firstItem="lMn-QW-xDe" firstAttribute="leading" secondItem="7HP-EE-PPQ" secondAttribute="trailing" constant="5" id="cnm-Gq-jgY"/>
                             <constraint firstItem="UVc-HX-fa8" firstAttribute="height" secondItem="Pcf-pU-tba" secondAttribute="height" id="eAv-NG-ms7"/>
                             <constraint firstItem="GfI-oy-sy0" firstAttribute="leading" secondItem="UVc-HX-fa8" secondAttribute="trailing" id="fO2-qh-xqs"/>
                             <constraint firstItem="Pcf-pU-tba" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="fsc-bR-8Mw"/>
@@ -115,16 +147,19 @@
                             <constraint firstItem="GfI-oy-sy0" firstAttribute="centerY" secondItem="Pcf-pU-tba" secondAttribute="centerY" id="ja5-as-MOX"/>
                             <constraint firstItem="UVc-HX-fa8" firstAttribute="centerY" secondItem="Pcf-pU-tba" secondAttribute="centerY" id="lTm-68-7iD"/>
                             <constraint firstItem="UVc-HX-fa8" firstAttribute="width" secondItem="Pcf-pU-tba" secondAttribute="width" id="oSj-ca-f9g"/>
+                            <constraint firstItem="ZOv-l8-3L5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="tOS-P8-I7n"/>
+                            <constraint firstItem="ZOv-l8-3L5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="wJh-dJ-2IG"/>
                             <constraint firstItem="GfI-oy-sy0" firstAttribute="height" secondItem="Pcf-pU-tba" secondAttribute="height" id="xZE-lL-veH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keyField" destination="ZOv-l8-3L5" id="MX4-5l-OxS"/>
                         <outlet property="tableView" destination="UIO-aM-1A7" id="HXX-fg-WYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351" y="54"/>
+            <point key="canvasLocation" x="-710" y="-39"/>
         </scene>
     </scenes>
 </document>

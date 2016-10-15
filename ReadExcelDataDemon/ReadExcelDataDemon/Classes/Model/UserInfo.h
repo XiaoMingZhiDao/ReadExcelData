@@ -10,11 +10,9 @@
 
 @interface UserInfo : NSObject
 
-/** 姓名 */
-@property (nonatomic ,copy) NSString *name;
-/** 性别 */
-@property (nonatomic ,strong) NSNumber *sex;
-/** 年龄 */
-@property (nonatomic ,strong) NSNumber *age;
+/** 外文 */
+@property (nonatomic ,copy) NSString *ForeignLanguage;
+/** 中文 */
+@property (nonatomic ,copy) NSString *ChineseLanguage;
 
 @end

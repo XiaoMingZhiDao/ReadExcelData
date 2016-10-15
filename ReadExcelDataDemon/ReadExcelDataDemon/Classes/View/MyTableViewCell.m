@@ -27,9 +27,9 @@
 {
     _info = info;
     
-    self.nameLabel.text = info.name;
-    self.sexLabel.text = [info.sex integerValue]==1?@"男":@"女";
-    self.ageLabel.text = [NSString stringWithFormat:@"%@ 岁",info.age];
+    self.nameLabel.text = info.ForeignLanguage;
+    self.sexLabel.text = info.ChineseLanguage;
+
     
 }
 @end

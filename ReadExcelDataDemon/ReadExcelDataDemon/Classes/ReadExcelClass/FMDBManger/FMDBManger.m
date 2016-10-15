@@ -10,8 +10,18 @@
 
 #import "UserInfo.h"
 
-@implementation FMDBManger
+@interface FMDBManger ()
+@property (nonatomic ,strong) NSMutableArray *failsArr;
+@end
 
+@implementation FMDBManger
+- (NSMutableArray *)failsArr
+{
+    if (!_failsArr) {
+        _failsArr = [NSMutableArray array];
+    }
+    return _failsArr;
+}
 MDJSingletonM(FMDBManger);
 
 static FMDatabase *_sharedFMDB = nil;
@@ -19,7 +29,11 @@ static FMDatabase *_sharedFMDB = nil;
 static NSString *const DB_NAME = @"ReadExcel.sqlite";
 /** “表”名 */
 static NSString *const DB_table1 = @"ExcelTable";
-
+/** “字段1”名 */
+static NSString *const DB_table_property1 = @"ForeignLanguage";
+/** “字段2”名 */
+static NSString *const DB_table_property2 = @"ChineseLanguage";
+// ForeignLanguage ChineseLanguage   UserName UserSex
 - (instancetype)init
 {
     self = [super init];
@@ -34,7 +48,7 @@ static NSString *const DB_table1 = @"ExcelTable";
     return self;
 }
 
-// 获取路径
+    // 获取路径
 - (NSString *)getDataBaseFilePath
 {
     NSArray *filePath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -55,13 +69,13 @@ static NSString *const DB_table1 = @"ExcelTable";
         NSString *sql;
         if ([name isEqualToString:DB_table1]){
             // 表1 对应的sql语句
-            sql = [NSString stringWithFormat:@"CREATE TABLE %@(id INTEGER PRIMARY KEY, UserName VARCHAR,UserSex INTEGER,UserAge INTEGER default '0')",name];
+            sql = [NSString stringWithFormat:@"CREATE TABLE %@(id INTEGER PRIMARY KEY, %@ VARCHAR,%@ VARCHAR)",name,DB_table_property1,DB_table_property2];
         }
         
         BOOL flag = [_sharedFMDB executeUpdate:sql];
         MDJLog(@"database running...创建表:%@,result:%zd",name,flag);
     }
-    [_sharedFMDB close];
+//    [_sharedFMDB close];
 }
 
 -(void)deleteTableNamed:(NSString *)name{
@@ -87,14 +101,16 @@ static NSString *const DB_table1 = @"ExcelTable";
 }
 
 /***************************** 以下是数据库处理接口 *************************************/
+
 // 插入用户信息
-- (BOOL)insertUserInformationWithName:(NSString *)name sex:(NSNumber *)sex age:(NSNumber *)age
+- (BOOL)insertUserInformationWithForeignLanguage:(NSString *)ForeignLanguage chineseLanguage:(NSNumber *)ChineseLanguage
 {
     [_sharedFMDB open];
+    
     [_sharedFMDB setShouldCacheStatements:YES];
     
-    NSString *sql =  @"INSERT INTO ExcelTable (UserName,UserSex,UserAge) VALUES(?,?,?);";
-    BOOL flag = [_sharedFMDB executeUpdate:sql,name,sex,age];
+    NSString *sql =[NSString stringWithFormat:@"INSERT INTO ExcelTable (%@,%@) VALUES(?,?);",DB_table_property1,DB_table_property2];
+    BOOL flag = [_sharedFMDB executeUpdate:sql,ForeignLanguage,ChineseLanguage];
     flag?MDJLog(@"用户信息插入成功"):MDJLog(@"用户信息插入失败");
     
     [_sharedFMDB close];
@@ -112,11 +128,11 @@ static NSString *const DB_table1 = @"ExcelTable";
     BOOL flag = [_sharedFMDB executeUpdate:sql];
     flag?MDJLog(@"用户信息插入成功"):MDJLog(@"用户信息插入失败");
     
-    [_sharedFMDB close];
+//    [_sharedFMDB close];
     return flag;
 }
 
-// 查询用户所有信息
+// 查询用户词典所有信息
 -(NSArray *)getUserInfo
 {
     [_sharedFMDB open];
@@ -128,14 +144,11 @@ static NSString *const DB_table1 = @"ExcelTable";
     while ([rs next]) {
        
         UserInfo *info = [[UserInfo alloc] init];
-        NSString *userName = [rs stringForColumn:@"UserName"];
-        info.name = userName;
+        NSString *ForeignLanguage = [rs stringForColumn:DB_table_property1];
+        info.ForeignLanguage = ForeignLanguage;
         
-        NSNumber *userSex = [rs objectForColumnName:@"UserSex"];
-        info.sex = userSex;
-        
-        NSNumber *userAge = [rs objectForColumnName:@"UserAge"];
-        info.age = userAge;
+        NSString *ChineseLanguage = [rs stringForColumn:DB_table_property2];
+        info.ChineseLanguage = ChineseLanguage;
         
         [infos addObject:info];
     }
@@ -143,4 +156,30 @@ static NSString *const DB_table1 = @"ExcelTable";
     return infos;
 }
 
+    - (NSArray *)findDicWithKey:(NSString *)key
+    {
+        [_sharedFMDB open];
+        [_sharedFMDB setShouldCacheStatements:YES];
+        
+        NSString *sql = [NSString stringWithFormat:@"SELECT rowid, * FROM ExcelTable WHERE ForeignLanguage = '%@';",key];
+        MDJLog(@"sql:%@",sql);
+        
+        FMResultSet *rs = [_sharedFMDB executeQuery:sql];
+        
+        NSMutableArray *infos = [NSMutableArray array];
+        while ([rs next]) {
+            UserInfo *info = [[UserInfo alloc] init];
+            NSString *ForeignLanguage = [rs stringForColumn:DB_table_property1];
+            info.ForeignLanguage = ForeignLanguage;
+            
+            NSString *ChineseLanguage = [rs stringForColumn:DB_table_property2];
+            info.ChineseLanguage = ChineseLanguage;
+            
+            [infos addObject:info];
+
+        }
+        [_sharedFMDB close];
+        return infos;
+        
+    }
 @end

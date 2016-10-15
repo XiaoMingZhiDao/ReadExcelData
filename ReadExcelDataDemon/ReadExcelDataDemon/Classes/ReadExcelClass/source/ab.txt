@@ -1,0 +1,1 @@
+insert into ExcelTable (ForeignLanguage,ChineseLanguage) values ('апостроф','省字符号，分离符(‘)(如: с’езд)');
