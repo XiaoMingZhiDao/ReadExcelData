@@ -23,12 +23,75 @@
   
 * 若```abc.txt``` 不知如何处理，那么可放在```Xcode```内先读取，截取，然后再插入数据库;详见ReadExcelDataDemon。
 
+#### demon截图
+  ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/1.png)
+  ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/2.png)
+  ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/3.png)
+  
+#### demon 调用方法
 
-  
-  
-  
-  
-  
+##### demon 写入数据
+``` objc
+- (IBAction)writeDataClick:(UIButton *)sender {
+// 数据源
+NSString *path = [[NSBundle mainBundle] pathForResource:TxtName ofType:@".txt"];
+NSString *content = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+
+NSArray <NSString *> *dataArray = [content componentsSeparatedByString:@";"];
+FMDBManger *mgr = [FMDBManger sharedFMDBManger];
+
+// 插入语句
+for (NSInteger i = 0; i < dataArray.count - 1; i++) {
+BOOL flag = [mgr insertUserInformationWithSql:dataArray[i]];
+if (flag) {
+SuccessFlag ++;
+}else{
+FailFlag ++;
+}
+}
+
+[MDJStatusBarHUD showSuccess:[NSString stringWithFormat:@"成功插入数据 %zd 条",SuccessFlag]];
+
+MDJLog(@"成功：%zd;失败:%zd",SuccessFlag,FailFlag);
+}  
+```
+
+##### demon 读取数据
+``` objc
+- (IBAction)readDataClick:(UIButton *)sender {
+FMDBManger *mgr = [FMDBManger sharedFMDBManger];
+NSArray *cells = [mgr getUserInfo];
+[self.cells removeAllObjects];
+[self.cells addObjectsFromArray:cells];
+NSString *msg = nil;
+if(cells.count){
+msg = [NSString stringWithFormat:@"成功加载数据%zd条",cells.count];
+}else{
+msg = [NSString stringWithFormat:@"无可加载数据，请先写入数据"];
+}
+[MDJStatusBarHUD showSuccess:msg];
+[self.tableView reloadData];
+} 
+```
+
+##### demon 清除数据
+``` objc
+- (IBAction)clearDataClick:(UIButton *)sender {
+// 数据库清除
+FMDBManger *mgr = [FMDBManger sharedFMDBManger];
+[mgr clearAllDataBase];
+
+// 缓存清除
+self.cells = nil;
+[MDJStatusBarHUD showSuccess:@"所有数据清除完"];
+SuccessFlag = 0;
+
+[self.tableView reloadData];
+}
+ 
+```
+
+
   
   
   
