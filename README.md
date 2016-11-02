@@ -2,7 +2,7 @@
 ###Excel内读取数据到数据库
 
 ---
-#### 环境说明
+### 环境说明
 * 目前环境是mac book pro，Excel后缀 .xlsx 
 
 ### Excel 处理
@@ -25,6 +25,7 @@
 
 #### demon截图
   ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/1.png)
+  ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/4.png)
   ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/2.png)
   ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/3.png)
   
