@@ -10,9 +10,9 @@
 
 
 *  将Excel内容的英文 ; '符号换成中文（避免和sql语句混淆）
-*  增加一列（D列），选中D列（记住是整列，否则就要手动拖拽），在Excel上方公式栏fx内输入输入公式```（="insert into table(field1,field2,field3) values"&"("&A1&","&B1&","&C1&")"）```，ctrl+enter。建议有多少拖多少，整列公式数据多了会很慢！
+*  增加一列（D列），选中D列（记住是整列，否则就要手动拖拽），在Excel上方公式栏fx内输入输入公式```（="insert into table(field1,field2,field3) values"&"("&A1&","&B1&","&C1&")"）```，ctrl+enter。建议有多少拖多少，整列公式数据多了会很慢！(可能会将空余行也添加了公式，手动shift选中，删除即可)
 
-*  这是整个D列都生成如下的SQL语句：``` insert into mytable (field1,field2,field3、field4) values ('A1中 的数据','B1','C1','D1');```
+*  这是整个D列都生成如下的SQL语句：``` insert into mytable (field1,field2,field3) values ('A1中 的数据','B1','C1');```
 
 *  某几行的数据公司可能不需要，手动删除即可；
 
@@ -28,9 +28,9 @@
   ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/2.png)
   ![image](https://github.com/XiaoMingZhiDao/ReadExcelData/blob/master/3.png)
   
-### demon 调用方法
+### demon 调用方法如下
 
-##### demon 写入数据
+* 写入数据
 ``` objc
 - (IBAction)writeDataClick:(UIButton *)sender {
 // 数据源
@@ -56,7 +56,7 @@ MDJLog(@"成功：%zd;失败:%zd",SuccessFlag,FailFlag);
 }  
 ```
 
-##### demon 读取数据
+* 读取数据
 ``` objc
 - (IBAction)readDataClick:(UIButton *)sender {
 FMDBManger *mgr = [FMDBManger sharedFMDBManger];
@@ -74,7 +74,7 @@ msg = [NSString stringWithFormat:@"无可加载数据，请先写入数据"];
 } 
 ```
 
-##### demon 清除数据
+* 清除数据
 ``` objc
 - (IBAction)clearDataClick:(UIButton *)sender {
 // 数据库清除
