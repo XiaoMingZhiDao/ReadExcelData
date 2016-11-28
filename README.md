@@ -9,7 +9,7 @@
 * 假设有```abc.xlsl``` excel表格，内有三列数据分别是A B C ，行数不限制
 
 
-*  将Excel内容的英文 ; '符号换成中文（避免和sql语句混淆）
+*  将Excel内容的英文 ; '符号换成中文（避免和sql语句混淆，一旦出现插入数据失败，而内容又含有英文符号;"那么就要）
 *  增加一列（D列），选中D列（记住是整列，否则就要手动拖拽），在Excel上方公式栏fx内输入输入公式```（="insert into table(field1,field2,field3) values"&"("&A1&","&B1&","&C1&")"）```，ctrl+enter。建议有多少拖多少，整列公式数据多了会很慢！(可能会将空余行也添加了公式，手动shift选中，删除即可)
 
 *  这是整个D列都生成如下的SQL语句：``` insert into mytable (field1,field2,field3) values ('A1中 的数据','B1','C1');```
